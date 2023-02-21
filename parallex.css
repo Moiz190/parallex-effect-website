@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family:'Poppins';
+    src: url('./poppin/Poppins-Medium.ttf');
+}
+body{
+    font-family: 'Poppins';
+    background: linear-gradient(#2b1055 ,#7597de);
+    height: 100vh;
+    color: #fff;
+    overflow-x: hidden;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem 0;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+}
+.navbar-container .logo-container{
+    font-size: 1.5rem;
+}
+.navbar-container nav ul {
+    display: flex;
+    list-style-type: none;
+}
+.navbar-container nav ul li {
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    margin: 0 1rem;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.navbar-container nav ul li:hover{
+    background-color: #fff;
+    color: #2b1055;
+}
+.parallex-image-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 5rem;
+    overflow: hidden;
+}
+.parallex-image-container::before{
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 6.25rem;
+    background: linear-gradient(to top, #1c0522 ,transparent);
+    z-index: 10000;
+}
+.moonlight-text-container{
+    font-size:4.5rem;
+    font-weight: bold;
+    z-index: 2;
+    right: -8.5rem;
+    transform: translateY(-5rem);
+    position: absolute;
+}
+.mountain-front-container{
+    z-index: 3;
+}
+.moon-container{
+    mix-blend-mode: screen;
+}
+.stars-container{
+    z-index: -1;
+}
+.explore-btn{
+    z-index: 4;
+    background-color: #fff;
+    color: #2b1055;
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.parallex-description-container{
+    position: relative;
+    background-color: #1c0522;
+    padding: 4rem 6rem;
+}
+.parallex-description-container h2{
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+@media (max-width:700px) {
+    .navbar-container nav{
+        display: none;
+    }
+    .moonlight-text-container{
+        display: none;
+    }
+    .navbar-container{
+        justify-content: center;
+        padding-top: 0;
+    }
+    .navbar-container .logo-container{
+        font-size: 3rem;
+    }
+    .parallex-description-container{
+        padding: 2rem
+    }
+    .parallex-description-container h2{
+        font-size: 2rem;
+    }
+}   

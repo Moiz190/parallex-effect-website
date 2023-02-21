@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallex Website</title>
+    <link rel="stylesheet" href="parallex.css">
+</head>
+<body>
+    <div class="parallex-container">
+        <!-- Navbar-section  -->
+        <header class="navbar-container">
+            <div class="logo-container"><h3>Logo</h2></div>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Work</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </header>
+        <div class="parallex-image-container">
+            <div class="moonlight-text-container"><h2 id="moonlightText">Moon light</h2></div>
+            <div class="explore-btn"id="exploreBtn"><span>Explore</span></div>
+            <div class="moon-container">
+                <img src="images/moon.png" id="moon" />
+            </div>
+            <div class="stars-container" >
+                <img src="images/stars.png" id="star" />
+            </div>
+            <div class="mountain-behind-container">
+                <img src="images/mountains_behind.png" id="mountainBehind" />
+            </div>
+            <div class="mountain-front-container">
+                <img src="images/mountains_front.png" id="mountainFront" />
+            </div>
+        </div>
+        <div class="parallex-description-container">
+            <h2>Parallex Scrolling Effect</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque delectus reiciendis, temporibus quos officiis similique consequatur ullam iusto sunt ad accusamus laborum dignissimos quibusdam maiores voluptatum modi deserunt excepturi sapiente! Amet beatae nisi dolore vitae harum necessitatibus repellat, numquam enim assumenda cumque doloribus natus sit culpa libero, corrupti in asperiores tempore sapiente accusamus deserunt possimus esse facilis quia! Commodi deleniti atque animi dolores, velit possimus, quo similique, accusamus optio sapiente molestias illo? Unde ratione, eos reprehenderit facilis repellat quo inventore esse quidem ab quasi nulla molestiae vel dolores odio maxime natus vitae optio nemo, amet culpa id tempore? Deserunt, ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque delectus reiciendis, temporibus quos officiis similique consequatur ullam iusto sunt ad accusamus laborum dignissimos quibusdam maiores voluptatum modi deserunt excepturi sapiente! Amet beatae nisi dolore vitae harum necessitatibus repellat, numquam enim assumenda cumque doloribus natus sit culpa libero, corrupti in asperiores tempore sapiente accusamus deserunt possimus esse facilis quia! Commodi deleniti atque animi dolores, velit possimus, quo similique, accusamus optio sapiente molestias illo? Unde ratione, eos reprehenderit facilis repellat quo inventore esse quidem ab quasi nulla molestiae vel dolores odio maxime natus vitae optio nemo, amet culpa id tempore? Deserunt, ex.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque delectus reiciendis, temporibus quos officiis similique consequatur ullam iusto sunt ad accusamus laborum dignissimos quibusdam maiores voluptatum modi deserunt excepturi sapiente! Amet beatae nisi dolore vitae harum necessitatibus repellat, numquam enim assumenda cumque doloribus natus sit culpa libero, corrupti in asperiores tempore sapiente accusamus deserunt possimus esse facilis quia! Commodi deleniti atque animi dolores, velit possimus, quo similique, accusamus optio sapiente molestias illo? Unde ratione, eos reprehenderit facilis repellat quo inventore esse quidem ab quasi nulla molestiae vel dolores odio maxime natus vitae optio nemo, amet culpa id tempore? Deserunt, ex.Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque delectus reiciendis, temporibus quos officiis similique consequatur ullam iusto sunt ad accusamus laborum dignissimos quibusdam maiores voluptatum modi deserunt excepturi sapiente! Amet beatae nisi dolore vitae harum necessitatibus repellat, numquam enim assumenda cumque doloribus natus sit culpa libero, corrupti in asperiores tempore sapiente accusamus deserunt possimus esse facilis quia! Commodi deleniti atque animi dolores, velit possimus, quo similique, accusamus optio sapiente molestias illo? Unde ratione, eos reprehenderit facilis repellat quo inventore esse quidem ab quasi nulla molestiae vel dolores odio maxime natus vitae optio nemo, amet culpa id tempore? Deserunt, ex.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque delectus reiciendis, temporibus quos officiis similique consequatur ullam iusto sunt ad accusamus laborum dignissimos quibusdam maiores voluptatum modi deserunt excepturi sapiente! Amet beatae nisi dolore vitae harum necessitatibus repellat, numquam enim assumenda cumque doloribus natus sit culpa libero, corrupti in asperiores tempore sapiente accusamus deserunt possimus esse facilis quia! Commodi deleniti atque animi dolores, velit possimus, quo similique, accusamus optio sapiente molestias illo? Unde ratione, eos reprehenderit facilis repellat quo inventore esse quidem ab quasi nulla molestiae vel dolores odio maxime natus vitae optio nemo, amet culpa id tempore? Deserunt, ex.Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque delectus reiciendis, temporibus quos officiis similique consequatur ullam iusto sunt ad accusamus laborum dignissimos quibusdam maiores voluptatum modi deserunt excepturi sapiente! Amet beatae nisi dolore vitae harum necessitatibus repellat, numquam enim assumenda cumque doloribus natus sit culpa libero, corrupti in asperiores tempore sapiente accusamus deserunt possimus esse facilis quia! Commodi deleniti atque animi dolores, velit possimus, quo similique, accusamus optio sapiente molestias illo? Unde ratione, eos reprehenderit facilis repellat quo inventore esse quidem ab quasi nulla molestiae vel dolores odio maxime natus vitae optio nemo, amet culpa id tempore? Deserunt, ex.</p>
+        </div>
+    </div>
+    <script>
+        let navbarContainer =document.querySelector('header');
+        let moon = document.getElementById('moon');
+        let stars = document.getElementById('star');
+        let moonlightText =document.getElementById('moonlightText');
+        let exploreBtn =document.getElementById('exploreBtn');
+        let mountainBehind =document.getElementById('mountainBehind')
+          addEventListener('scroll',()=>{
+            let scrollValue = window.scrollY;
+            navbarContainer.style.top = scrollValue*0.03 + 'rem'; 
+            stars.style.left = scrollValue *0.02 + 'rem';
+            stars.style.top =scrollValue *0.01 + 'rem';
+            moon.style.top = scrollValue * 0.04 + 'rem';
+            moonlightText.style.marginRight = scrollValue * 0.12 + 'rem';
+            exploreBtn.style.marginTop = scrollValue *0.09 + 'rem'
+            mountainBehind.style.top =scrollValue *0.03 + 'rem'
+            mountainFront.style.bottom =scrollValue*0 + 'rem'
+            
+        })
+    </script>
+</body>
+</html>
